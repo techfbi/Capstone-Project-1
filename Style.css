@@ -1,0 +1,302 @@
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    overflow-x: hidden; /* Disables horizontal scrolling */
+    box-sizing: border-box; /* Ensures consistent box sizing */
+}
+.logo {
+    height: 50px;
+    margin-left: 50px;
+}
+.header-section {
+    position: relative;
+    background-image: url(/mountain-snow-rock.jpg);
+    margin-bottom: 50px;
+    background-size: cover;
+    width: 100vw;
+    padding-bottom: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    color: white;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent black overlay */
+    z-index: 1;
+}
+.index {
+    position: relative; /*This will make all the items come above the overlay when the z index is set*/
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    padding-top: 50px;
+
+}
+a {
+    color: black; 
+    text-decoration:none; 
+    cursor:pointer;
+    font-weight: bold;
+}
+.head {
+    display: flex;
+    gap: 50px;
+    justify-content: right;
+    align-items: right;
+    width: 100%;
+    margin-right: 50px;
+}
+
+.head div:hover {
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 3px;
+
+
+}
+.header-section  .container  .head a {
+    color: white;
+}
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto; /* Centers horizontally */
+    margin-top: 30px;
+}
+.profile-img img {
+    text-align: center;
+}
+
+.Profile-bio {
+    text-align: center;
+}
+.cont-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.first-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    max-width: 1000px;
+    column-gap: 50px;
+    height: 500px;
+    padding: 30px;
+
+
+
+}
+.body-img {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    height: 500px;
+    margin-top: 20px;
+}
+.right {
+    height: 100%;
+    width: 700px;
+}
+.d-about > p {
+    margin-bottom: -15px;
+}
+.d-about > h1 {
+    margin-bottom: -10px;
+}
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: red;
+    border: none;
+    color: white;
+    margin: 0;
+ }
+ button:hover {
+    background-color: #1e1a1a ; /* Darker shade on hover */
+    padding: 15px;
+    border-radius: 10px;
+}
+/*div {
+    borde: 1px solid;
+}*/
+table {
+    height: 250px;
+    border: 3px solid red;
+    padding: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 100%;
+}
+.tlead {
+    font-weight: bold;
+}
+
+.third-section {
+    margin: 10px;
+    height: fit-content;
+}
+.service-cont {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+.service {
+    border: 3px solid red;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.fa-solid {
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.service-heading {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.whatido {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;    
+}
+.ido {
+    width: 90%;
+    max-width: 1020px;
+}
+.ido div p {
+    margin-bottom: -25px;
+}
+
+.downloadcv {
+    display: flex;
+    height: fit-content;
+    margin-top: 10px;
+}
+
+.footer {
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+.footmenu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+}
+
+/* 
+SCREEN SIZES
+Mobile Devices: 319px — 480px
+iPads and Tablets: 481px — 1200px
+Laptops: 1201px — 1600px
+Desktops: 1601px and more
+*/
+@media (max-width: 1200px) {
+    body {
+        background-color: bisque;
+        font-size: smaller;
+    }
+    .logo {
+        height: 40px;
+    }
+    .head {
+        gap:30px;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        margin-top: 40px;
+    }
+    .Profile-bio {
+        font-size: small;
+    }
+    .first-section {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 70%;
+        object-fit: contain;
+    }
+    .body-img {
+        height: 400px;
+    }
+    .body-img img {
+        /*to position the image to show my head cos it was only my chest part it was showing*/
+        object-position: center 10%;
+    }
+    .right {
+        width: 100%;
+    }
+    .table {
+        min-height: 150px;
+    }
+    .cont-first {
+        height: fit-content;
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+    .service-cont {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .service {
+       height: 220px;
+    }
+    .fa-solid {
+        font-size: 30px;
+        margin-bottom: 7px;
+    }
+}
+
+
+@media (max-width: 481px) {
+    .head {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 10px;
+    }
+    .logo {
+        height: 30px;
+    }
+    .Profile-bio {
+        font-size: 10px;
+    }
+    table {
+        border-radius: 0;
+    }
+}
+
+
+
