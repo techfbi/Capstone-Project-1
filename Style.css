@@ -13,7 +13,7 @@ body {
 }
 .header-section {
     position: relative;
-    background-image: url(/mountain-snow-rock.jpg);
+    background-image: url(mountain-snow-rock.jpg);
     margin-bottom: 50px;
     background-size: cover;
     width: 100vw;
